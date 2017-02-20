@@ -1,158 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical"
-    android:padding="@dimen/padding_layout">
+    android:layout_height="match_parent">
 
-    <!-- D I S P L A Y -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_layout">
 
-    <EditText
-        android:id="@+id/editText"
-        style="@style/style_display"
-        android:gravity="end"
-        android:inputType="numberDecimal|numberSigned|number"
-        android:text="0"
-        android:textIsSelectable="true" />
+        <!-- D I S P L A Y -->
 
-    <!-- Botões da calculadora -->
+        <EditText
+            android:id="@+id/edit_display"
+            style="@style/style_display"
+            android:gravity="end"
+            android:inputType="numberDecimal|numberSigned|number"
+            android:textIsSelectable="true"
+            />
 
-    <TableLayout style="@style/table_style">
+        <!-- Botões da calculadora -->
 
-        <TableRow>
+        <TableLayout style="@style/table_style">
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/quadrado" />
+            <TableRow>
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/cubo" />
+                <Button
+                    style="@style/button_style"
+                    android:text="@string/quadrado" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/xy" />
+                <Button
+                    style="@style/button_style"
+                    android:text="@string/cubo" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/ce" />
-        </TableRow>
+                <Button
+                    style="@style/button_style"
+                    android:text="@string/xy" />
 
-        <TableRow>
+                <Button
+                    android:onClick="ceOnClick"
+                    style="@style/button_style"
+                    android:text="@string/ce" />
+            </TableRow>
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/raiz" />
+            <TableRow>
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/fatorial" />
+                <Button
+                    style="@style/button_style"
+                    android:text="@string/raiz" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/porcentagem" />
+                <Button
+                    style="@style/button_style"
+                    android:text="@string/fatorial" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/modulo" />
+                <Button
+                    style="@style/button_style"
+                    android:text="@string/porcentagem" />
+
+                <Button
+                    style="@style/button_style"
+                    android:text="@string/modulo" />
 
 
-        </TableRow>
+            </TableRow>
 
-        <TableRow>
+            <TableRow>
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/sete" />
+                <Button
+                    android:onClick="numberOnClick"
+                    style="@style/button_style"
+                    android:text="@string/sete" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/oito"/>
+                <Button
+                    android:onClick="numberOnClick"
+                    style="@style/button_style"
+                    android:text="@string/oito" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/nove"/>
+                <Button
+                    android:onClick="numberOnClick"
+                    style="@style/button_style"
+                    android:text="@string/nove" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/backspace"/>
+                <Button
+                    android:onClick="bsOnClick"
+                    style="@style/button_style"
+                    android:text="@string/backspace" />
 
-        </TableRow>
+            </TableRow>
 
-        <TableRow>
+            <TableRow>
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/quatro" />
+                <Button
+                    android:onClick="numberOnClick"
+                    style="@style/button_style"
+                    android:text="@string/quatro" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/cinco"/>
+                <Button
+                    android:onClick="numberOnClick"
+                    style="@style/button_style"
+                    android:text="@string/cinco" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/seis"/>
+                <Button
+                    android:onClick="numberOnClick"
+                    style="@style/button_style"
+                    android:text="@string/seis" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/divisao"/>
+                <Button
+                    style="@style/button_style"
+                    android:text="@string/divisao" />
 
-        </TableRow>
+            </TableRow>
 
-        <TableRow>
+            <TableRow>
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/um" />
+                <Button
+                    android:onClick="numberOnClick"
+                    style="@style/button_style"
+                    android:text="@string/um" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/dois"/>
+                <Button
+                    android:onClick="numberOnClick"
+                    style="@style/button_style"
+                    android:text="@string/dois" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/tres"/>
+                <Button
+                    android:onClick="numberOnClick"
+                    style="@style/button_style"
+                    android:text="@string/tres" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/multiplicacao"/>
+                <Button
+                    style="@style/button_style"
+                    android:text="@string/multiplicacao" />
 
-        </TableRow>
+            </TableRow>
 
-        <TableRow>
+            <TableRow>
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/mais_menos" />
+                <Button
+                    style="@style/button_style"
+                    android:text="@string/mais_menos" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/zero"/>
+                <Button
+                    android:onClick="numberOnClick"
+                    style="@style/button_style"
+                    android:text="@string/zero" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/ponto"/>
+                <Button
+                    style="@style/button_style"
+                    android:text="@string/ponto" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/adicao"/>
+                <Button
+                    style="@style/button_style"
+                    android:text="@string/adicao" />
 
-        </TableRow>
+            </TableRow>
 
-        <TableRow>
+            <TableRow>
 
-            <Button
-                style="@style/button_style"
-                android:layout_weight="1"
-                android:text="@string/igual" />
+                <Button
+                    style="@style/button_style"
+                    android:layout_weight="1"
+                    android:text="@string/igual" />
 
-            <Button
-                style="@style/button_style"
-                android:text="@string/subtracao"/>
+                <Button
+                    style="@style/button_style"
+                    android:text="@string/subtracao" />
 
-        </TableRow>
+            </TableRow>
 
-    </TableLayout>
+        </TableLayout>
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
