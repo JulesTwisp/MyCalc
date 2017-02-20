@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">MyCalc</string>
+    <string name="quadrado">x²</string>
+    <string name="cubo">x³</string>
+    <string name="xy">x^y</string>
+    <string name="ce">CE</string>
+    <string name="raiz"><![CDATA[&#8730;]]></string>
+    <string name="fatorial">n!</string>
+    <string name="porcentagem">%</string>
+    <string name="modulo">MOD</string>
+    <string name="sete">7</string>
+    <string name="oito">8</string>
+    <string name="nove">9</string>
+    <string name="backspace"><![CDATA[&#8656;]]></string>
+    <string name="quatro">4</string>
+    <string name="cinco">5</string>
+    <string name="seis">6</string>
+    <string name="divisao"><![CDATA[&#247;]]></string>
+    <string name="um">1</string>
+    <string name="dois">2</string>
+    <string name="tres">3</string>
+    <string name="multiplicacao">X</string>
+    <string name="mais_menos"><![CDATA[&#177;]]></string>
+    <string name="zero">0</string>
+    <string name="ponto">.</string>
+    <string name="adicao">+</string>
+    <string name="igual">=</string>
+    <string name="subtracao">-</string>
 </resources>

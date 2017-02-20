@@ -1,17 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="br.senai.sp.informatica.mycalc.MainActivity">
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_layout">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+    <!-- D I S P L A Y -->
+
+    <EditText
+        android:id="@+id/editText"
+        style="@style/style_display"
+        android:gravity="end"
+        android:inputType="numberDecimal|numberSigned|number"
+        android:text="0"
+        android:textIsSelectable="true" />
+
+    <!-- Botões da calculadora -->
+
+    <TableLayout style="@style/table_style">
+
+        <TableRow>
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/quadrado" />
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/cubo" />
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/xy" />
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/ce" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/raiz" />
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/fatorial" />
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/porcentagem" />
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/modulo" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/sete" />
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/oito"/>
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/nove"/>
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/backspace"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/quatro" />
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/cinco"/>
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/seis"/>
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/divisao"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/um" />
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/dois"/>
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/tres"/>
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/multiplicacao"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/mais_menos" />
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/zero"/>
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/ponto"/>
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/adicao"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                style="@style/button_style"
+                android:layout_weight="1"
+                android:text="@string/igual" />
+
+            <Button
+                style="@style/button_style"
+                android:text="@string/subtracao"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
