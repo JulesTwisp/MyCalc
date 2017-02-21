@@ -29,14 +29,18 @@
             <TableRow>
 
                 <Button
+                    android:onClick="quadradoOnClick"
                     style="@style/button_style"
                     android:text="@string/quadrado" />
 
                 <Button
+                    android:onClick="cuboOnClick"
                     style="@style/button_style"
                     android:text="@string/cubo" />
 
                 <Button
+                    android:id="@+id/button_potencia"
+                    android:onClick="opOnClick"
                     style="@style/button_style"
                     android:text="@string/xy" />
 
@@ -49,18 +53,23 @@
             <TableRow>
 
                 <Button
+                    android:onClick="raizOnClick"
                     style="@style/button_style"
                     android:text="@string/raiz" />
 
                 <Button
+                    android:onClick="fatorialOnClick"
                     style="@style/button_style"
                     android:text="@string/fatorial" />
 
                 <Button
+                    android:onClick="porcentagemOnClick"
                     style="@style/button_style"
                     android:text="@string/porcentagem" />
 
                 <Button
+                    android:id="@+id/button_modulo"
+                    android:onClick="opOnClick"
                     style="@style/button_style"
                     android:text="@string/modulo" />
 
@@ -134,6 +143,8 @@
                     android:text="@string/tres" />
 
                 <Button
+                    android:id="@+id/button_mult"
+                    android:onClick="opOnClick"
                     style="@style/button_style"
                     android:text="@string/multiplicacao" />
 
@@ -142,19 +153,24 @@
             <TableRow>
 
                 <Button
+                    android:onClick="maisMenosOnClick"
                     style="@style/button_style"
                     android:text="@string/mais_menos" />
 
                 <Button
                     android:onClick="numberOnClick"
                     style="@style/button_style"
-                    android:text="@string/zero" />
+                    android:text="@string/zero"
+                    android:id="@+id/button" />
 
                 <Button
+                    android:onClick="pontoOnClick"
                     style="@style/button_style"
                     android:text="@string/ponto" />
 
                 <Button
+                    android:id="@+id/button_adicao"
+                    android:onClick="opOnClick"
                     style="@style/button_style"
                     android:text="@string/adicao" />
 
@@ -169,6 +185,8 @@
                     android:text="@string/igual" />
 
                 <Button
+                    android:id="@+id/button_sub"
+                    android:onClick="opOnClick"
                     style="@style/button_style"
                     android:text="@string/subtracao" />
 
