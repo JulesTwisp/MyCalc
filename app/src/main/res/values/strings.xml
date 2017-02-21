@@ -26,4 +26,5 @@
     <string name="adicao">+</string>
     <string name="igual">=</string>
     <string name="subtracao">-</string>
+    <string name="erro_backspace">Erro: o display está vazio</string>
 </resources>

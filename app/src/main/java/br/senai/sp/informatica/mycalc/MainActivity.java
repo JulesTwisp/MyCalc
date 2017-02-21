@@ -2,9 +2,11 @@ package br.senai.sp.informatica.mycalc;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText editDisplay;
@@ -54,18 +56,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void bsOnClick(View view) {
-        // Pega o valor atual no display
-        String currentDisplay = editDisplay.getEditableText().toString();
-        // Remove o ultimo caractere
-        currentDisplay = currentDisplay.substring(0, currentDisplay.length() - 1);
-        // Se o valor não estiver vazio
-        if (!currentDisplay.isEmpty()) {
-            // Grava o valor atual
-            editDisplay.setText(currentDisplay);
-        } else {
-            // caso haja algo no display
-            // escreve zero
-            editDisplay.setText(R.string.zero);
+        try {
+            // Pega o valor atual no display
+            String currentDisplay = editDisplay.getEditableText().toString();
+            // Remove o ultimo caractere
+            currentDisplay = currentDisplay.substring(0, currentDisplay.length() - 1);
+            // Se o valor não estiver vazio
+            if (!currentDisplay.isEmpty()) {
+                // Grava o valor atual
+                editDisplay.setText(currentDisplay);
+            } else {
+                // caso haja algo no display
+                // escreve zero
+                editDisplay.setText(R.string.zero);
+            }
+        } catch (StringIndexOutOfBoundsException e){
+            Toast.makeText(this, getString(R.string.erro_backspace), Toast.LENGTH_SHORT).show();
+            Log.e("CALC", e.getMessage());
         }
     }
+
+    public void opOnClick(View view){
+        // Armazena o valor atual do display com base no id da view
+        stringDisplay = editDisplay.getEditableText().toString();
+        valorDisplay = Double.parseDouble(stringDisplay);
+        // com base no id da view determina qual operaçãO deverá ser realizada
+    }
+
 }
