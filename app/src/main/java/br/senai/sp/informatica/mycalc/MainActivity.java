@@ -70,17 +70,47 @@ public class MainActivity extends AppCompatActivity {
                 // escreve zero
                 editDisplay.setText(R.string.zero);
             }
-        } catch (StringIndexOutOfBoundsException e){
+        } catch (StringIndexOutOfBoundsException e) {
             Toast.makeText(this, getString(R.string.erro_backspace), Toast.LENGTH_SHORT).show();
             Log.e("CALC", e.getMessage());
         }
     }
 
-    public void opOnClick(View view){
-        // Armazena o valor atual do display com base no id da view
-        stringDisplay = editDisplay.getEditableText().toString();
-        valorDisplay = Double.parseDouble(stringDisplay);
-        // com base no id da view determina qual operaçãO deverá ser realizada
+    public void opOnClick(View view) {
+        try {
+            // Armazena o valor atual do display com base no id da view
+            stringDisplay = editDisplay.getEditableText().toString();
+            valorDisplay = Double.parseDouble(stringDisplay);
+            // com base no id da view determina qual operaçãO deverá ser realizada
+            switch (view.getId()) {
+                case R.id.button_divisao:
+                    operacao = "D";
+                    // zera o valor do display para que o usuário consiga digitar
+                    // o próximo valor
+                    editDisplay.setText(getString(R.string.zero));
+                    break;
+            }
+
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, getString(R.string.valor_invalido), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void igualOnClick(View view) {
+        // Verifica qual a operação selecionada
+        switch (operacao) {
+            case "D":
+                // Recupera o valor do display (segundo valor)
+                // realiza a operação aritmetica
+                Double divisor = Double.parseDouble(editDisplay.getEditableText().toString());
+                resultado = valorDisplay / divisor;
+                break;
+        }
+        if (!resultado.isInfinite()) {
+            editDisplay.setText(String.valueOf(resultado));
+        } else {
+            Toast.makeText(this, getString(R.string.div_zero), Toast.LENGTH_SHORT).show();
+        }
     }
 
 }

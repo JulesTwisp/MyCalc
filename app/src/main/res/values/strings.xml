@@ -27,4 +27,6 @@
     <string name="igual">=</string>
     <string name="subtracao">-</string>
     <string name="erro_backspace">Erro: o display está vazio</string>
+    <string name="div_zero">Não há como dividir por 0</string>
+    <string name="valor_invalido">Valor inválido</string>
 </resources>

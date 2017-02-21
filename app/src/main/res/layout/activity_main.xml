@@ -163,6 +163,7 @@
             <TableRow>
 
                 <Button
+                    android:onClick="igualOnClick"
                     style="@style/button_style"
                     android:layout_weight="1"
                     android:text="@string/igual" />
